@@ -1,0 +1,271 @@
+
+:root {
+  --main-white-color: white;
+  --main-black-color: black;
+  --webkit-tap-highlight-color:transparent;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,h2,h4,h5 {
+    font-family: 'Montserrat';
+}
+
+@media screen and (max-width: 650px) {
+
+  .card-deck.my-5{
+  margin: auto ;
+  align-items: center;
+  }
+  
+  .navbar-nav.ml-auto.float-right{
+    display:block;
+    flex-direction: column;
+  }
+
+  .col-sm-8.col-md-3.item{
+    display: none;
+  }
+
+  .footer_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    
+  }
+}
+
+a {
+  font-family: 'Montserrat';
+  color: #4dcdf8;
+  font-size: 1rem;
+}
+
+a:hover{
+  color: aqua;
+  opacity:0.3;
+  text-decoration: none;
+
+}
+
+
+
+.navbar-expand-lg{
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 5px 12px rgba(74, 74, 74, 0.231); 
+}
+
+.navbar-dark .navbar-toggler{
+  border-color: transparent;
+}
+
+
+.static {
+  position: static;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.navbar-nav.ml-auto.float-right{
+  display: flex;
+  justify-content:center
+}
+
+
+p{
+  width: 90%;
+  font-family: 'Raleway';
+}
+
+.btn-link{
+  font-family: 'Montserrat';
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+
+}
+
+.btn-link:hover,  .btn-link:active{
+  color:aquamarine;
+  text-decoration: none;
+
+}
+  
+/*************/
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color: black;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.3;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.3;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  color: #fff;
+  padding-top:24px;
+  margin-left: 5%;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+.jumbotron {
+  color: rgb(255, 239, 239);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),url("/img/cursos3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+.display-4{
+  font-weight: 400;
+  align-content: flex-start;
+}
+
+
+
+.services{
+  padding-bottom: 2rem;
+}
+
+.services .icon-box  h4 {
+padding-left: 1rem ;
+
+}
+
+
+.services .icon-box h4 a {
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+.services .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 30px 0 rgba(184, 193, 200, 0.403);
+}
+
+.card{
+  padding: 4 rem;
+  border: none;
+  border-radius: 0;
+}
+
+.card-img{
+  margin-bottom: 1rem;
+}
+
+.display-4{
+  align-content:flex-start;
+  text-align: left;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-shadow: 3px 3px 8px #000000;
+  
+}
+.display-6{
+  font-weight: 200;
+  align-content:flex-start;
+  text-align: left;
+  font-family: 'Montserrat';
+  text-shadow: 1px 1px 3px #000000;
+  
+}
+
+.card:hover{
+  border: fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+
+}

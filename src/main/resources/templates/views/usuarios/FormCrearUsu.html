@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+	integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<title>Crear Actividades Islas Hormigas</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<header th:replace="plantilla/template::header"></header>
+
+<body>
+
+	<div class="container">
+
+
+
+		<div class="card bg-light">
+			<div class="card-header bg-dark text-white" th:text="${titulo}"></div>
+			<div class="card-body">
+				<form action="" th:object="${usuario}" method="post">
+					<div class="mb-3">
+						<label th:for="*{username}" class="form-label">Username</label> 
+						<input th:field="*{username}" type="text" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label th:for="*{password}" class="form-label">Contraseña</label>
+						<input th:field="*{password}" type="password" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label th:for="*{email}" class="form-label">Email</label> <input
+							th:field="*{email}" type="email" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label th:for="*{nombre}" class="form-label">Nombre</label> <input
+							th:field="*{nombre}" type="text" class="form-control" id="nombre">
+					</div>
+
+					<div class="mb-3">
+						<label th:for="*{direccion}" class="form-label">Dirección</label>
+						<input th:field="*{direccion}" type="text" class="form-control"
+							id="direccion">
+					</div>
+
+					<div class="card-footer bg-dark">
+						<input type="submit" class="btn btn-primary btn-md"
+							th:value="Guardar">
+					</div>
+					</form>
+				</div>
+		</div>
+	</div>
+
+
+
+
+
+	<footer th:replace="plantilla/template::footer"></footer>
+</body>
+</html>

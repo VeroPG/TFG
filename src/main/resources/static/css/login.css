@@ -1,0 +1,331 @@
+
+:root {
+--main-white-color: white;
+--main-black-color: black;
+--webkit-tap-highlight-color:transparent;
+}
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+margin:0;
+color:#6a6f8c;
+background:#000000;
+font-family: 'Montserrat';
+
+} 
+h2,h5 {
+    font-family: 'Montserrat';
+}
+
+@media screen and (max-width: 650px) {
+
+.card-deck.my-5{
+margin: auto ;
+align-items: center;
+}
+
+
+.navbar-nav.ml-auto.float-right{
+    display:block;
+    flex-direction: column;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+}
+a {
+font-family: 'Montserrat';
+}
+
+a:hover{
+opacity:0.3;
+
+}
+
+
+
+.navbar-expand-lg{
+background-color: rgb(0, 0, 0);
+box-shadow: 0 5px 12px rgba(74, 74, 74, 0.231); 
+}
+
+.navbar-dark .navbar-toggler{
+border-color: transparent;
+}
+
+
+.static {
+position: static;
+}
+
+.cover {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+
+.navbar-nav.ml-auto.float-right{
+display: flex;
+justify-content:center
+}
+
+
+p{
+width: 90%;
+font-family: 'Raleway';
+}
+
+
+
+
+.footer-dark {
+padding:50px 0;
+color:#f0f9ff;
+background-color: black;
+}
+
+.footer-dark h3 {
+margin-top:0;
+margin-bottom:12px;
+font-weight:bold;
+font-size:16px;
+}
+
+.footer-dark ul {
+padding:0;
+list-style:none;
+line-height:1.6;
+font-size:14px;
+margin-bottom:0;
+}
+
+.footer-dark ul a {
+color:inherit;
+text-decoration:none;
+opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+opacity:0.3;
+}
+
+@media (max-width:767px) {
+.footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+}
+}
+
+.footer-dark .item.text {
+margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+.footer-dark .item.text {
+    margin-bottom:0;
+}
+}
+
+.footer-dark .item.text p {
+opacity:0.6;
+margin-bottom:0;
+}
+
+.footer-dark .item.social {
+text-align:center;
+}
+
+@media (max-width:991px) {
+.footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+}
+}
+
+.footer-dark .item.social > a {
+font-size:20px;
+width:36px;
+height:36px;
+line-height:36px;
+display:inline-block;
+text-align:center;
+border-radius:50%;
+box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+margin:0 8px;
+color:#fff;
+opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+opacity:0.3;
+}
+
+.footer-dark .copyright {
+text-align:center;
+color: #fff;
+padding-top:24px;
+margin-left: 5%;
+opacity:0.3;
+font-size:13px;
+margin-bottom:0;
+}
+
+a{
+color:inherit;
+text-decoration:none}
+
+h2{
+    font-family: Monstserrat;
+}
+
+.login-wrap{
+    width:100%;
+    margin:auto;
+    max-width:525px;
+    min-height:800px;
+    position:relative;
+    background:url(https://images.unsplash.com/photo-1559825477-6f38d6332bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80) no-repeat ;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:75px 70px 50px 70px;
+    background:rgba(33, 38, 53, 0.295);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+    transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+    display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+    text-transform:uppercase;
+}
+.login-html .tab{
+    font-family: 'Raleway';
+    font-size:22px;
+    margin-right:15px;
+    padding-bottom:5px;
+    margin:0 15px 10px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+    color:#fff;
+    border-color:#73b1bf;
+    
+}
+.login-form{
+    min-height:345px;
+    position:relative;
+    perspective:1000px;
+    transform-style:preserve-3d;
+}
+.login-form .group{
+    margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+    width:100%;
+    color:#fff;
+    display:block;
+    
+}
+.login-form .group .input,
+.login-form .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+
+    -webkit-text-security:circle;
+}
+.login-form .group .label{
+    color:#ADD4D9;
+    font-size:12px;
+    font-family: 'Raleway';
+}
+.login-form .group .button{
+    background: #73b1bf;
+}
+.login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:rgba(255, 255, 255, 0.363);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+    content:'';
+    width:10px;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+    top:6px;
+    right:0;
+    transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+    color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+    background:#73b1bf;
+}
+.login-form .group .check:checked + label .icon:before{
+    transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+    transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    transform:rotate(0);
+}
+
+
+.foot-lnk{
+    text-align:center;
+}

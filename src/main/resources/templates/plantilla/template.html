@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title>CRUD </title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<link rel="icon" type="image/png" th:src="@{/img/islas.jpeg}"/>
+</head>
+<body>
+
+	<!-- NAV BAR -->
+
+	<header th:fragment="header">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+			<nav class="navbar navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<a class="navbar-brand" href="/home"> <img th:src="@{/img/logo2.png}"
+					alt="Logo Islas Hormigas" />
+				</a>
+			</nav>
+
+
+
+			<!-- BUTTON - DROPDOWN -->
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto float-left">
+					<!-- BUTTON - NORMAL -->
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/home">Inicio</a></li>
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/cursos">Cursos</a></li>
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/inmersiones">Salidas</a></li>
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/nosotros">Nosotros</a></li>
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/contacto">Contacto</a></li>
+					<li class="nav-item" style="width: 120px"><a class="nav-link"
+						href="/login">Mi cuenta</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+
+	</header>
+
+	<!-- CONTENT -->
+
+	<div class="container"></div>
+
+
+	<!-- FOOTER -->
+
+
+	<!-- FOOTER 3 COL -->
+	<footer th:fragment="footer">
+		<div class="footer_container">
+			<div class="footer-dark">
+				<footer>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5 item text">
+								<h3>ACERCA DE NOSOTROS</h3>
+								<p>
+									En Islas Hormigas Club de Buceo queremos compartir contigo
+									nuestra pasi&oacute;n por el mar y nuestra forma de entender el
+									buceo.<br>
+									<br> Descubre a trav&eacute;s de nuestras salidas y
+									nuestros cursos formativos todo lo que el oc&eacute;ano esconde
+									y vive nuevas experiencias en la mejor compa&ntilde;&iacute;a.
+								</p>
+							</div>
+							<div class="col-sm-8 col-md-4 item">
+								<img th:src="@{/img/logov2.png}" alt="Logo Islas Hormigas">
+							</div>
+							<div class="col-md-3 item text-center">
+								<h3>LINKS</h3>
+								<ul>
+									<br />
+									<li class="policy"><a id="policy" href="/legal">Terminos
+											de uso</a>
+									</p>
+										<br />
+									<li class="policy"><a id="policy" href="/privacidad">Privacidad</a>
+									</p>
+										<br />
+									<li class="policy"><a id="policy" href="/cookies">Cookies</a>
+									</p>
+										<br />
+								</ul>
+							</div>
+
+							<div class="col item social">
+								<a id="sm" target="_blank"
+									href="https://www.youtube.com/watch?v=TXrWZhWjv5I"><span
+									class="fab fa-youtube"></a></span></a> <a id="sm" target="_blank"
+									href="https://www.facebook.com/islashormigasclubdebuceo/"><span
+									class="fab fa-facebook"> <a id="sm" target="_blank"
+										href="https://www.instagram.com/islashormigas_dive_center/"><span
+											class="fab fa-instagram"></a></span></a>
+							</div>
+						</div>
+						<p class="copyright">Copyright &copy; 2020 Islas Hormigas.
+							Todos los derechos reservados.</p>
+					</div>
+					<script type="text/javascript"
+						th:src="@{/js/bootstrap.bundle.min.js}"></script>
+				</footer>
+
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

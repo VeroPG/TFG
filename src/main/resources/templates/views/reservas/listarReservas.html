@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<title>Usuarios Islas Hormigas</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+
+
+
+<body>
+	<header th:replace="plantilla/template::header"></header>
+	
+	
+	<div class="container">
+	<div style="padding:0 3rem">
+		<h1 th:text="${titulo}">RESERVAS</h1>	
+	</div>
+
+		<a class="btn btn-primary btn-sm" th:href="@{/views/reservas/createReserva}"
+			th:text="'Nueva Reserva'" title="Crear Nueva Reserva"></a>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Id Reserva</th>
+					<th scope="col">Actividad</th>
+					<th scope="col">Usuario</th>
+					<th scope="col">Precio</th>
+					<th scope="col">Obervaciones</th>
+					<th>Editar</th>
+					<th>Eliminar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="res:${reservas}">
+					<th scope="row" th:text="${res.id}"></th>
+					<td th:text="${res.idReserva}"></td>
+					<td th:text="${res.idActividad}"></td>
+					<td th:text="${res.idUsuario}"></td>
+					<td th:text="${res.precio}"></td>
+					<td th:text="${res.observaciones}"></td>
+					<td>
+					<a class="btn btn-success btn-sm" th:href="@{/views/reservas/edit/}+${res.id}" 
+					th:text="'Editar'" title="Editar Reserva"></a>
+					</td>
+					<td>
+					<a class="btn btn-danger btn-sm" th:href="@{/views/reservas/delete/}+${res.id}" 
+					th:text="'Eliminar'" title="Eliminar Reserva"
+					onclick="return confirm('¿Estás seguro de querer eliminar el registro?')"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	
+	
+	
+	<footer th:replace="plantilla/template::footer"></footer>
+</body>
+</html>

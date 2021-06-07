@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<title>Crear Actividades Islas Hormigas</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<header th:replace="plantilla/template::header"></header>
+
+
+
+<div class="container">
+
+
+	<div class="card bg-light">
+			<div class="card-header bg-dark text-white" th:text="${titulo}"></div>
+			<div class="card-body">
+<form action="" th:object="${actividad}" method="post">
+  <div class="mb-3">
+    <label th:for="*{nombre}" class="form-label">Nombre de la actividad</label>
+    <input th:field="*{nombre}" class="form-control">
+  </div>
+    <div class="mb-3">
+    <label th:for="*{descripcion}" class="form-label">Descripcin</label>
+    <input th:field="*{descripcion}" type="text" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label th:for="*{estado}" class="form-label">Estado</label>
+    <select th:field="*{estado}"  class="form-control" id="estadoInput">
+    <option value="1">Activo</option>
+    <option value="2">Inactivo</option>
+    </select>
+  </div>
+  
+   <div class="mb-3">
+    <label th:for="*{fechaInicio}"class="form-label">Fecha de inicio</label>
+    <input th:field="*{fechaInicio}" type="date" class="form-control" id="fechaInicioInput">
+  </div>
+  
+  <div class="mb-3">
+    <label th:for="*{precio}" class="form-label">Precio</label>
+    <input th:field="*{precio}" class="form-control" id="precioInput">
+  </div>
+  
+  <div class="mb-3">
+    <label for="tipoInput" class="tipos">Tipo</label>
+    <select th:field="*{tipo}" class="form-control form-control-sm col-md-6">
+    <option th:each="tipo:${tipos}"
+    th:value="${tipo.idTipo}"
+    th:text="${tipo.nombre}"></option>
+
+     </select>
+  </div>
+  
+  	<div class="card-footer bg-dark">
+		<input type="submit" class="btn btn-primary btn-md" th:value="Guardar">
+	</div>
+ 
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<footer th:replace="plantilla/template::footer"></footer>
+</body>
+</html>

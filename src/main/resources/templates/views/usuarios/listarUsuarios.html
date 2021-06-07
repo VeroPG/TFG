@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Raleway:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<title>Usuarios Islas Hormigas</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+
+
+
+<body>
+	<header th:replace="plantilla/template::header"></header>
+	
+
+	<div class="container">
+		<h1 th:text="${titulo}">Usuario</h1>	
+	</div>
+	
+		<a class="btn btn-primary btn-sm" th:href="@{/views/usuarios/create}"
+			th:text="'Nuevo Usuario'" title="Crear Nuevo Usuario"></a>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Username</th>
+					<th scope="col">Password</th>
+					<th scope="col">email</th>
+					<th scope="col">nombre</th>
+					<th scope="col">direccion</th>
+					<th>Editar</th>
+					<th>Eliminar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="us:${usuarios}">
+
+					<td th:text="${us.idUsuario}"></td>
+					<td th:text="${us.username}"></td>
+					<td th:text="${us.password}"></td>
+					<td th:text="${us.email}"></td>
+					<td th:text="${us.nombre}"></td>
+					<td th:text="${us.direccion}"></td>
+					<td>
+					<a class="btn btn-success btn-sm" th:href="@{/views/usuarios/edit/}+${us.username}" 
+					th:text="'Editar'" title="Editar Usuario"></a>
+					</td>
+					<td>
+					<a class="btn btn-danger btn-sm" th:href="@{/views/usuarios/delete/}+${us.username}" 
+					th:text="'Eliminar'" title="Eliminar Usuario"
+					onclick="return confirm('¿Estás seguro de querer eliminar el registro?')"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	
+	
+	
+	<footer th:replace="plantilla/template::footer"></footer>
+</body>
+</html>
